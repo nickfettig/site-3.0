@@ -1,5 +1,5 @@
 import { space, sora } from "@/app/fonts";
-import NavLink from "./navlink";
+import NavLink from "./common/navlink";
 
 export default function Landing() {
   return (

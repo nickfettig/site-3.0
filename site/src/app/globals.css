@@ -5,7 +5,7 @@
 }
 
 .landing {
-    background-image: url("../../public/landing_bg.svg");
+    background-image: url("../../public/scenery/landing_bg.svg");
     background-size: cover;
     background-position-y: bottom;
     background-position-x: center;
@@ -17,7 +17,7 @@
 }
 
 .main-grad {
-    background: linear-gradient(75.26deg, #77A6A8 -1.47%, #5B6F80 51.63%, #324444 104.74%);
+    background: linear-gradient(78deg, #77A6A8 -1.47%, #5B6F80 51.63%, #324444 104.74%);
 }
 
 .header-grad {
