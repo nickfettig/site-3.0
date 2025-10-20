@@ -7,9 +7,10 @@ export default function Landing() {
       <div className={`text-landing-nav ${space.className} text-2xl flex items-start justify-between font-light`}>
         <NavLink text = "fettig.dev" link = "https://fettig.dev" />
         <div className="flex flex-col gap-4 text-right">
-            <NavLink text = "Portfolio" link = "" />
-            <NavLink text = "Contact" link = "" />
-            <NavLink text = "Blog" link = "" />
+            <NavLink text = "About" link = "id:about" />
+            <NavLink text = "Portfolio" link = "id:portfolio" />
+            <NavLink text = "Contact" link = "id:contact" />
+            <NavLink text = "Blog" link = "blog" />
         </div>
       </div>
       <div className="bg-white/10 rounded-full width-custom absolute top-5/6 left-1/2 -translate-x-1/2 -translate-y-1/2">

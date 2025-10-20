@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Landing />
-      <div className="main-grad py-12 px-16 flex flex-col gap-12">
+      <div className="main-grad py-12 px-16 flex flex-col gap-16">
         <About />
         <Portfolio />
         <Contact />
