@@ -7,16 +7,16 @@ import SocialIcon from "./common/social-icon";
 
 export default function Contact() {
     return (
-    <div id = "contact">
+    <div id = "contact" className="max-w-7xl mx-auto">
         <SectionHeader header="CONTACT"/>
-        <div className = "mt-8 grid grid-cols-4 gap-8">
-            <Image src='/scenery/boat.svg' alt={"boat"} className="w-full h-full shadow-lg rounded-lg" width={20} height={20}/>
+        <div className = "mt-8 xl:grid grid-cols-4 gap-8">
+            <Image src='/scenery/boat.svg' alt={"boat"} className="hidden xl:block w-full h-full shadow-lg rounded-lg" width={20} height={20}/>
             <ContentDiv col={3}>
-                <div className={`${sora.className} text-[#DBE8E9] text-lg flex flex-col font-light h-full`}>
+                <div className={`${sora.className} text-[#DBE8E9] text-md md:text-lg flex flex-col font-light h-full`}>
                     <p>
                         I always love meeting new people and talking about tech. Shoot me a message at my email address, <ContentLink text="nicholasfettig63@gmail.com" link="mailto:nicholasfettig63@gmail.com"/>, or check out any of my socials below! 
                     </p>
-                    <div className="grow flex justify-center gap-12 items-center">
+                    <div className="flex grow flex-col md:flex-row justify-center items-center gap-8 lg:gap-12 my-6">
                         <SocialIcon color = "#CE4881" link = "https://instagram.com/fett1g" svg_path = "/contact_icons/instagram.svg"/>
                         <SocialIcon color = "#2298B7" link = "https://linkedin.com/in/nick-fettig" svg_path = "/contact_icons/linkedin.svg"/>
                         <SocialIcon color = "#784686" link = "https://github.com/nickfettig" svg_path = "/contact_icons/github.svg"/>

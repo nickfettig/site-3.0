@@ -9,12 +9,19 @@
     background-size: cover;
     background-position-y: bottom;
     background-position-x: center;
+    max-width: 1900px;
 }
 
 .width-custom {
-    width: 85vw;
-    height: 85vw;
+    max-width: 1600px;
+    max-height: 1600px;
 }
+@media (width >= 96rem) {
+    .width-custom {
+         width: 85vw;
+        height: 85vw;
+        }   
+    }
 
 .main-grad {
     background: linear-gradient(78deg, #77A6A8 -1.47%, #5B6F80 51.63%, #324444 104.74%);

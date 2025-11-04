@@ -13,7 +13,7 @@ export const projects: ProjectType[] = [
         link: "https://www.sccs.swarthmore.edu/docs",
         bg_image_src: "/portfolio_bg/lists.png",
         skills: ["NextJS", "TailwindCSS", "PostgreSQL", "Prisma", "Docker", "Figma"],
-        description: "TODO"
+        description: "I'm the project lead for Mailing Lists, building a frontend for GNU Mailman with features for organization management, list filtering, and extended settings stored in a linked database."
     },
     {
         title: "SCCS Cygnet",
@@ -27,7 +27,7 @@ export const projects: ProjectType[] = [
         link: "https://www.threewiresys.com/complyvue",
         bg_image_src: "/portfolio_bg/complyvue.png",
         skills: ["NextJS", "TailwindCSS", "ExpressJS", "NodeJS", "Docker", "Kubernetes", "Skaffold"],
-        description: "TODO"
+        description: "I interned at Graphicient LLC, contributing to ComplyVue, a cybersecurity dashboard for Three Wire Systems that aggregates DoD-secured data sources like Tenable to streamline compliance monitoring."
     },
     {
         title: "Swift Music (Hackathon Winner)",

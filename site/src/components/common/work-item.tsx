@@ -6,10 +6,10 @@ export default function WorkItem({icon_path, employer, role, description, employ
     return (
         <>
             <div className="col-span-2 flex gap-8">
-                <Image src = {icon_path} alt = "" className = "col-span-1 h-28 w-28 rounded-lg shadow-lg" width={12} height={12}/>
+                <Image src = {icon_path} alt = "" className = "col-span-1 h-20 md:h-28 w-20 md:w-28 rounded-lg shadow-lg" width={12} height={12}/>
                 <div className={`h-full flex flex-col justify-between text-[#DBE8E9] ${sora.className}`}>
                     <div>
-                        <h1 className="text-medium text-xl text-[#F2EEEF]">{employer}</h1>
+                        <h1 className="text-medium text-md md:text-xl text-[#F2EEEF]">{employer}</h1>
                         <p>{role}</p>
                     </div>
                     <p className="italic">{employment_dates}</p>
