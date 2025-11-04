@@ -13,7 +13,7 @@ export default function Landing() {
             <NavLink text = "Blog" link = "blog" />
         </div>
       </div>
-      <div className="xl:bg-white/10 rounded-full w-full h-full text-center width-custom absolute top-1/12 xl:top-3/4 2xl:top-5/6 left-1/2 -translate-x-1/2 xl:-translate-y-1/2">
+      <div className="xl:bg-white/10 rounded-full w-full h-full text-center width-custom absolute top-1/6 xl:top-5/6 2xl:top-5/6 left-1/2 -translate-x-1/2 xl:-translate-y-1/2">
         <p className={`text-center ${sora.className} text-[#516765] text-4xl md:text-5xl font-light mt-10`}>NICK FETTIG</p>
         <p className = {`text-center ${space.className} text-[#598282] text-lg md:text-2xl font-light`}>Student & Developer</p>
       </div>
