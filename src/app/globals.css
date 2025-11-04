@@ -9,14 +9,14 @@
     background-size: cover;
     background-position-y: bottom;
     background-position-x: center;
-    max-width: 1900px;
+    max-width: 1700px;
 }
 
 .width-custom {
-    max-width: 1600px;
-    max-height: 1600px;
+    max-width: 1400px;
+    max-height: 1400px;
 }
-@media (width >= 96rem) {
+@media (width >= 80rem) {
     .width-custom {
          width: 85vw;
         height: 85vw;

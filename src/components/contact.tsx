@@ -23,6 +23,7 @@ export default function Contact() {
                         <SocialIcon color = "#EB7E3F" link = "mailto:nicholasfettig63@gmail.com" svg_path = "/contact_icons/mail.svg"/>
                         <SocialIcon color = "#D23D3D" link = "https://discord.com/users/177916233532833794" svg_path = "/contact_icons/discord.svg"/>
                     </div>
+                    <p className="bg-[#CE4881] bg-[#2298B7] bg-[#784686] bg-[#EB7E3F] bg-[#D23D3D]"></p> {/* TOOD: report tailwind bug */}
                 </div>
             </ContentDiv>
         </div>
