@@ -6,7 +6,7 @@ export default function Landing() {
     <div className = 'w-full h-screen landing py-8 px-12 overflow-hidden relative mx-auto'>
       <div className={`text-[#382E47]/60 ${space.className}  text-xl md:text-2xl 2xl:text-3xl flex flex-col lg:flex-row items-center lg:items-start lg:justify-between font-light max-w-7xl mx-auto`}>
         <NavLink text = "fettig.dev" link = "https://fettig.dev" />
-        <div>
+        <div className="mt-4 lg:mt-0">
           <p className={`text-center ${sora.className} text-[#382E47]/90 text-4xl md:text-5xl font-light`}>NICK FETTIG</p>
           <p className = {`text-center ${space.className} text-[#382E47]/60 text-lg md:text-2xl font-light`}>Student & Developer</p>
         </div>
