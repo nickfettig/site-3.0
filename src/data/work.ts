@@ -9,13 +9,6 @@ export const workItems: WorkItemType[] = [
         description: "Incoming role for next summer. Shinkei Systems develops AI-driven robots that automate humane fish harvesting and preservation."
     },
     {
-        icon_path: "/about_icons/swarthmore.svg", 
-        employer: "Swarthmore College", 
-        role: "Teacher's Assistant", 
-        employment_dates: "August 2023 - Current",
-        description: "I TA for intro to intermediate level computer science and engineering courses for both the Computer Science and Engineering departments. I work directly with students to assist with homework, labwork, and test preperation. I also had a short stint as a live model for an art class!"
-    },
-    {
         icon_path: "/about_icons/reliable.svg", 
         employer: "Reliable Robotics", 
         role: "Software Engineering Intern", 
@@ -28,5 +21,12 @@ export const workItems: WorkItemType[] = [
         role: "Undergraduate Research Assistant", 
         employment_dates: "May - August 2024",
         description: "I research deployment challenges for Reinforcement Learning-based Traffic Signal Control (TSC). I have organized 200+ works in the RL-based TSC field into a novel deployment challenge classification taxonomy. I have continued to work for CMU's AI for Social Good lab remotely since the conclusion of my summer REU program."
+    },
+    {
+        icon_path: "/about_icons/swarthmore.svg", 
+        employer: "Swarthmore College", 
+        role: "Teacher's Assistant", 
+        employment_dates: "August 2023 - Current",
+        description: "I TA for intro to intermediate level computer science and engineering courses for both the Computer Science and Engineering departments. I work directly with students to assist with homework, labwork, and test preperation. I also had a short stint as a live model for an art class!"
     },
 ]
