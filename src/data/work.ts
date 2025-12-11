@@ -2,6 +2,13 @@ export type WorkItemType = {icon_path: string, employer: string, role: string, e
 
 export const workItems: WorkItemType[] = [
     {
+        icon_path: "/about_icons/shinkei.svg", 
+        employer: "Shinkei Systems", 
+        role: "Software Engineering Intern", 
+        employment_dates: "Summer 2026",
+        description: "Incoming role for next summer. Shinkei Systems develops AI-driven robots that automate humane fish harvesting and preservation."
+    },
+    {
         icon_path: "/about_icons/swarthmore.svg", 
         employer: "Swarthmore College", 
         role: "Teacher's Assistant", 
