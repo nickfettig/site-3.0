@@ -9,6 +9,13 @@ export const projects: ProjectType[] = [
         description: "A website created in March 2021 to monitor where vaccines were available in Montgomery County, MD. Over the two and a half months the website was active, it recieved 120k+ visits and helped hundreds of people recieve vaccinations."
     },
     {
+        title: "Home Server",
+        link: "https://fettig.dev",
+        bg_image_src: "/portfolio_bg/homeserver.jpeg",
+        skills: ["Linux Administration", "Docker", "Networking", "Security", "Cloudflare Tunneling"],
+        description: "I run an Ubuntu server at home to host containerized services like my personal site and Jellyfin, securely exposed using Cloudflare Tunnels."
+    },
+    {
         title: "SCCS Mailing Lists",
         link: "https://www.sccs.swarthmore.edu/docs",
         bg_image_src: "/portfolio_bg/lists.png",
