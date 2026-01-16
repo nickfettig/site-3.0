@@ -15,7 +15,7 @@ export default function Landing() {
             <NavLink text = "About" link = "id:about" />
             <NavLink text = "Contact" link = "id:contact" />
             <NavLink text = "Resume" link = "resume" />
-            {/* <NavLink text = "Blog" link = "blog" /> */}
+            <NavLink text = "Blog" link = "https://blog.fettig.dev" />
         </div>
       </div>
     </div>
