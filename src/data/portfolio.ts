@@ -10,8 +10,8 @@ export const projects: ProjectType[] = [
     },
     {
         title: "Home Server",
-        link: "https://fettig.dev",
-        bg_image_src: "/portfolio_bg/homeserver.jpeg",
+        link: "https://blog.fettig.dev/new-build-home-server/",
+        bg_image_src: "/portfolio_bg/homeserver.png",
         skills: ["Linux Administration", "Docker", "Networking", "Security", "Cloudflare Tunneling"],
         description: "I run an Ubuntu server at home to host containerized services like my personal site and Jellyfin, securely exposed using Cloudflare Tunnels."
     },
