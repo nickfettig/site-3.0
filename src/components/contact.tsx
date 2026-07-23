@@ -1,32 +1,44 @@
 import Image from "next/image";
 import SectionHeader from "./common/section_header";
 import ContentDiv from "./common/content-div";
-import ContentLink from "./common/contentlink";
-import { sora, space } from "@/app/fonts";
+import { sans } from "@/app/fonts";
 import SocialIcon from "./common/social-icon";
+import { socials } from "./common/social-icons";
+import CopyEmail from "./common/copy-email";
+import { blurDataURLs } from "@/data/images";
+
+const EMAIL = "nicholasfettig63@gmail.com";
 
 export default function Contact() {
     return (
-    <div id = "contact" className="max-w-7xl mx-auto">
-        <SectionHeader header="CONTACT"/>
-        <div className = "mt-8 xl:grid grid-cols-4 gap-8">
-            <Image src='/scenery/boat.svg' alt={"boat"} className="hidden xl:block w-full h-full shadow-lg rounded-lg" width={20} height={20}/>
-            <ContentDiv col={3}>
-                <div className={`${sora.className} text-[#DBE8E9] text-md md:text-lg flex flex-col font-light h-full`}>
-                    <p>
-                        I always love meeting new people and talking about tech. Shoot me a message at my email address, <ContentLink text="nicholasfettig63@gmail.com" link="mailto:nicholasfettig63@gmail.com"/>, or check out any of my socials below! 
-                    </p>
-                    <div className="flex grow flex-col md:flex-row justify-center items-center gap-8 lg:gap-12 my-6">
-                        <SocialIcon color = "#CE4881" link = "https://instagram.com/fett1g" svg_path = "/contact_icons/instagram.svg"/>
-                        <SocialIcon color = "#2298B7" link = "https://linkedin.com/in/nick-fettig" svg_path = "/contact_icons/linkedin.svg"/>
-                        <SocialIcon color = "#784686" link = "https://github.com/nickfettig" svg_path = "/contact_icons/github.svg"/>
-                        <SocialIcon color = "#EB7E3F" link = "mailto:nicholasfettig63@gmail.com" svg_path = "/contact_icons/mail.svg"/>
-                        <SocialIcon color = "#D23D3D" link = "https://discord.com/users/177916233532833794" svg_path = "/contact_icons/discord.svg"/>
-                    </div>
-                    <p className="bg-[#CE4881] bg-[#2298B7] bg-[#784686] bg-[#EB7E3F] bg-[#D23D3D]"></p> {/* TOOD: report tailwind bug */}
+        <div id="contact" className="max-w-7xl mx-auto scroll-mt-8">
+            <SectionHeader header="CONTACT" />
+            <div className="mt-8 md:mt-10 grid gap-6 xl:grid-cols-4">
+                <div className="relative hidden overflow-hidden rounded-lg shadow-lg xl:block">
+                    <Image
+                        src="/scenery/boat.webp"
+                        alt="A sailboat on the water"
+                        fill
+                        placeholder="blur"
+                        blurDataURL={blurDataURLs.boat}
+                        sizes="25vw"
+                        className="object-cover"
+                    />
                 </div>
-            </ContentDiv>
+                <ContentDiv col={3}>
+                    <div className={`${sans.className} flex h-full flex-col justify-center gap-6 text-ink`}>
+                        <p className="text-md md:text-lg font-light leading-relaxed">
+                            I always love meeting new people and talking about tech. Grab my email below, or reach out on any of my socials!
+                        </p>
+                        <CopyEmail email={EMAIL} />
+                        <div className="flex flex-wrap justify-center gap-3">
+                            {socials.map((s) => (
+                                <SocialIcon key={s.label} {...s} />
+                            ))}
+                        </div>
+                    </div>
+                </ContentDiv>
+            </div>
         </div>
-    </div>
     );
 }

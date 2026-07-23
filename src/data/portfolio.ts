@@ -51,3 +51,44 @@ export const projects: ProjectType[] = [
         description: "A webapp that uses pandemic data to visualize it's spread. We created a website using HTML/CSS and an application using Expo/React-Native. The project won the Best Health Tech award."
     }
 ]
+
+export type Category = "Frontend" | "Backend" | "Systems" | "Database";
+
+// Order of the portfolio filter buttons.
+export const categoryOrder = ["All", "Frontend", "Backend", "Systems", "Database"] as const;
+
+// Which higher-level bucket each skill belongs to. A project belongs to a
+// category if any of its skills map to it. Skills not listed here (if added
+// later) simply don't affect filtering until mapped.
+export const skillCategories: Record<string, Category> = {
+    HTML5: "Frontend",
+    TailwindCSS: "Frontend",
+    NextJS: "Frontend",
+    ElectronJS: "Frontend",
+    Expo: "Frontend",
+    "React Native": "Frontend",
+    Figma: "Frontend",
+    ExpressJS: "Backend",
+    NodeJS: "Backend",
+    Flask: "Backend",
+    Python: "Backend",
+    "Linux Administration": "Systems",
+    Docker: "Systems",
+    Networking: "Systems",
+    Security: "Systems",
+    "Cloudflare Tunneling": "Systems",
+    Kubernetes: "Systems",
+    Skaffold: "Systems",
+    PostgreSQL: "Database",
+    MariaDB: "Database",
+    Prisma: "Database",
+};
+
+export function projectCategories(project: ProjectType): Set<Category> {
+    const cats = new Set<Category>();
+    for (const skill of project.skills) {
+        const cat = skillCategories[skill];
+        if (cat) cats.add(cat);
+    }
+    return cats;
+}

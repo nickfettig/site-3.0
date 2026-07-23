@@ -2,22 +2,53 @@
 
 @theme {
     --color-landing-nav: #566A68;
+
+    /* Warm accent for interactive elements (links, hovers, active filter) */
+    --color-accent: #E8965A;
+    --color-accent-hover: #F2AE72;
+
+    /* Text on the dark teal/slate surface */
+    --color-ink: #E7EFEF;
+    --color-ink-muted: #A9BDBF;
 }
 
-.landing {
-    background-image: url("../../public/scenery/boat_landing.svg");
-    background-size: cover;
-    background-position-y: bottom;
-    background-position-x: left;
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: none; }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease both;
+}
+
+@keyframes nudge {
+    0%, 100% { transform: translateY(0); opacity: 0.65; }
+    50% { transform: translateY(6px); opacity: 1; }
+}
+
+.scroll-cue {
+    animation: nudge 1.9s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-cue { animation: none; }
 }
 
 .main-grad {
-    background: linear-gradient(78deg, #77A6A8 -1.47%, #5B6F80 51.63%, #324444 104.74%);
+    background: linear-gradient(150deg, #3A6E70 -2%, #2C4B58 52%, #1B2A2B 105%);
 }
 
 .header-grad {
-    background: linear-gradient(90deg, #7FADAF, #BED4D5);
+    background: linear-gradient(90deg, #79C7C4, #E8965A);
+}
 
+/* Lifts the grey sky behind the hero text so the dark name/nav stay legible */
+.hero-scrim {
+    background: linear-gradient(180deg, rgba(238, 242, 244, 0.6) 0%, rgba(238, 242, 244, 0.14) 26%, rgba(238, 242, 244, 0) 46%);
 }
 
 .spotify-grad {

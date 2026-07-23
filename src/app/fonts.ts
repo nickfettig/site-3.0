@@ -1,10 +1,13 @@
-import { Space_Grotesk, Sora } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 
-
-export const space = Space_Grotesk({
-  subsets: ['latin']
+// Body / prose
+export const sans = Geist({
+  subsets: ['latin'],
+  display: 'swap',
 });
 
-export const sora = Sora({
-  subsets: ['latin']
+// Titles, name, nav, tech tags, footer
+export const mono = Geist_Mono({
+  subsets: ['latin'],
+  display: 'swap',
 });
