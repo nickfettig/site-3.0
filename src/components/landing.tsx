@@ -5,7 +5,7 @@ import { blurDataURLs } from "@/data/images";
 
 export default function Landing() {
   return (
-    <div className="w-full h-screen py-8 px-6 md:px-12 overflow-hidden relative">
+    <div className="relative h-screen w-full overflow-hidden px-6 py-8 md:px-12">
       {/* Progressive hero: the inlined blur renders instantly, the WebP streams
           in and swaps once decoded (no priority so it stays lazy/async). */}
       <Image
@@ -15,12 +15,12 @@ export default function Landing() {
         placeholder="blur"
         blurDataURL={blurDataURLs.hero}
         sizes="100vw"
-        className="object-cover object-[left_bottom] -z-20"
+        className="-z-20 object-cover object-[left_bottom]"
       />
       <div className="hero-scrim absolute inset-0 -z-10" />
 
       <div
-        className={`${mono.className} text-[#3E3A35] text-xl md:text-2xl 2xl:text-3xl flex flex-col lg:flex-row items-center lg:items-start lg:justify-between font-light max-w-7xl mx-auto`}
+        className={`${mono.className} mx-auto flex max-w-7xl flex-col items-center text-xl font-light text-[#3E3A35] md:text-2xl lg:flex-row lg:items-start lg:justify-between 2xl:text-3xl`}
       >
         <div className="flex items-center gap-3">
           <Image
@@ -30,19 +30,19 @@ export default function Landing() {
             height={56}
             placeholder="blur"
             blurDataURL={blurDataURLs.avatar}
-            className="h-12 w-12 md:h-14 md:w-14 rounded-full object-cover object-[50%_30%] ring-2 ring-white/50 shadow-sm"
+            className="h-12 w-12 rounded-full object-cover object-[50%_30%] shadow-sm ring-2 ring-white/50 md:h-14 md:w-14"
           />
           <NavLink text="fettig.dev" link="https://fettig.dev" />
         </div>
-        <div className="mt-4 lg:mt-0 text-center">
-          <p className="text-4xl md:text-5xl font-medium [text-shadow:_0_1px_10px_rgba(245,244,240,0.4)]">
+        <div className="mt-4 text-center lg:mt-0">
+          <p className="text-4xl font-medium [text-shadow:_0_1px_10px_rgba(245,244,240,0.4)] md:text-5xl">
             NICK FETTIG
           </p>
-          <p className="text-lg md:text-2xl font-light tracking-wide text-[#5A544B]">
+          <p className="text-lg font-light tracking-wide text-[#5A544B] md:text-2xl">
             Aspiring Roboticist
           </p>
         </div>
-        <div className="flex-col gap-3 text-right hidden lg:flex z-10">
+        <div className="z-10 hidden flex-col gap-3 text-right lg:flex">
           <NavLink text="Portfolio" link="id:portfolio" />
           <NavLink text="About" link="id:about" />
           <NavLink text="Contact" link="id:contact" />
@@ -55,7 +55,7 @@ export default function Landing() {
       <a
         href="#portfolio"
         aria-label="Scroll to content"
-        className="scroll-cue absolute bottom-6 left-1/2 -translate-x-1/2 text-[#3E3A35] hover:text-[#1B2A2B] transition-colors"
+        className="scroll-cue absolute bottom-6 left-1/2 -translate-x-1/2 text-[#3E3A35] transition-colors hover:text-[#1B2A2B]"
       >
         <svg
           width="30"

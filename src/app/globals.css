@@ -1,86 +1,111 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
-    --color-landing-nav: #566A68;
+  --color-landing-nav: #566a68;
 
-    /* Warm accent for interactive elements (links, hovers, active filter) */
-    --color-accent: #E8965A;
-    --color-accent-hover: #F2AE72;
+  /* Warm accent for interactive elements (links, hovers, active filter) */
+  --color-accent: #e8965a;
+  --color-accent-hover: #f2ae72;
 
-    /* Text on the dark teal/slate surface */
-    --color-ink: #E7EFEF;
-    --color-ink-muted: #A9BDBF;
+  /* Text on the dark teal/slate surface */
+  --color-ink: #e7efef;
+  --color-ink-muted: #a9bdbf;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(6px); }
-    to { opacity: 1; transform: none; }
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .fade-in {
-    animation: fadeIn 0.3s ease both;
+  animation: fadeIn 0.3s ease both;
 }
 
 @keyframes nudge {
-    0%, 100% { transform: translateY(0); opacity: 0.65; }
-    50% { transform: translateY(6px); opacity: 1; }
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.65;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
 }
 
 .scroll-cue {
-    animation: nudge 1.9s ease-in-out infinite;
+  animation: nudge 1.9s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .scroll-cue { animation: none; }
+  .scroll-cue {
+    animation: none;
+  }
 }
 
 .main-grad {
-    background: linear-gradient(150deg, #3A6E70 -2%, #2C4B58 52%, #1B2A2B 105%);
+  background: linear-gradient(150deg, #3a6e70 -2%, #2c4b58 52%, #1b2a2b 105%);
 }
 
 .header-grad {
-    background: linear-gradient(90deg, #79C7C4, #E8965A);
+  background: linear-gradient(90deg, #79c7c4, #e8965a);
 }
 
 /* Lifts the grey sky behind the hero text so the dark name/nav stay legible */
 .hero-scrim {
-    background: linear-gradient(180deg, rgba(238, 242, 244, 0.6) 0%, rgba(238, 242, 244, 0.14) 26%, rgba(238, 242, 244, 0) 46%);
+  background: linear-gradient(
+    180deg,
+    rgba(238, 242, 244, 0.6) 0%,
+    rgba(238, 242, 244, 0.14) 26%,
+    rgba(238, 242, 244, 0) 46%
+  );
 }
 
 /* Pizzaz for links: underline fades in/thickens and text picks up a warm glow. */
 .link-glow {
-    text-decoration-line: underline;
-    text-decoration-color: transparent;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 2px;
-    transition: color 0.3s ease, text-decoration-color 0.3s ease, text-underline-offset 0.3s ease, text-shadow 0.3s ease;
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  transition:
+    color 0.3s ease,
+    text-decoration-color 0.3s ease,
+    text-underline-offset 0.3s ease,
+    text-shadow 0.3s ease;
 }
 
 .link-glow:hover,
 .link-glow:focus-visible {
-    text-decoration-color: var(--color-accent);
-    text-underline-offset: 5px;
-    text-shadow: 0 0 12px rgba(232, 150, 90, 0.55);
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 5px;
+  text-shadow: 0 0 12px rgba(232, 150, 90, 0.55);
 }
 
 .link-glow-active {
-    text-decoration-color: var(--color-accent);
-    text-underline-offset: 2px;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 2px;
 }
 
 .link-glow-active:hover,
 .link-glow-active:focus-visible {
-    text-decoration-color: var(--color-accent-hover);
-    text-underline-offset: 4px;
-    text-shadow: 0 0 10px rgba(242, 174, 114, 0.5);
+  text-decoration-color: var(--color-accent-hover);
+  text-underline-offset: 4px;
+  text-shadow: 0 0 10px rgba(242, 174, 114, 0.5);
 }
 
 .spotify-grad {
-    background: linear-gradient(0deg, #1F2323, #2A3232) padding-box,
-              linear-gradient(to top right, #CE4881, #1ED760) border-box;
-    border: 6px solid transparent;
+  background:
+    linear-gradient(0deg, #1f2323, #2a3232) padding-box,
+    linear-gradient(to top right, #ce4881, #1ed760) border-box;
+  border: 6px solid transparent;
 }

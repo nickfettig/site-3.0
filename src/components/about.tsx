@@ -10,12 +10,12 @@ import { Fragment } from "react";
 
 export default function About() {
   return (
-    <div id="about" className="max-w-7xl mx-auto scroll-mt-8">
+    <div id="about" className="mx-auto max-w-7xl scroll-mt-8">
       <SectionHeader header="ABOUT ME" />
-      <div className="mt-8 md:mt-10 flex flex-col gap-8">
+      <div className="mt-8 flex flex-col gap-8 md:mt-10">
         <ContentDiv>
-          <div className="flex flex-col md:flex-row gap-6 md:gap-8">
-            <div className="relative shrink-0 mx-auto md:mx-0 w-full max-w-sm md:w-2/5 md:max-w-none aspect-[4/3] overflow-hidden rounded-lg shadow-lg ring-1 ring-white/10">
+          <div className="flex flex-col gap-6 md:flex-row md:gap-8">
+            <div className="relative mx-auto aspect-[4/3] w-full max-w-sm shrink-0 overflow-hidden rounded-lg shadow-lg ring-1 ring-white/10 md:mx-0 md:w-2/5 md:max-w-none">
               <Image
                 src="/scenery/hitl.webp"
                 alt="Nick soldering wiring on a robotics rig, surrounded by orange cabling"
@@ -27,7 +27,7 @@ export default function About() {
               />
             </div>
             <div
-              className={`${sans.className} flex flex-col text-ink gap-4 text-md md:text-lg font-light leading-relaxed md:justify-center`}
+              className={`${sans.className} text-ink text-md flex flex-col gap-4 leading-relaxed font-light md:justify-center md:text-lg`}
             >
               <p>
                 I'm a recent graduate of{" "}
@@ -82,19 +82,19 @@ export default function About() {
         </ContentDiv>
         <ContentDiv>
           <h3
-            className={`${mono.className} text-white font-semibold text-lg md:text-2xl`}
+            className={`${mono.className} text-lg font-semibold text-white md:text-2xl`}
           >
             Professional Work Experience
           </h3>
-          <p className={`${sans.className} mb-8 font-light text-ink`}>
+          <p className={`${sans.className} text-ink mb-8 font-light`}>
             Alternatively, download my resume{" "}
             <ContentLink text="here" link="resume" />.
           </p>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-4">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8 lg:grid-cols-4">
             {workItems.map((item, idx) => {
               const line =
                 idx === workItems.length - 1 ? null : (
-                  <div className="h-px col-span-full bg-white/10" />
+                  <div className="col-span-full h-px bg-white/10" />
                 );
               return (
                 <Fragment key={idx}>
