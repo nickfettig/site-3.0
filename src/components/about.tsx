@@ -4,6 +4,8 @@ import ContentLink from "./common/contentlink";
 import SectionHeader from "./common/section_header";
 import WorkItem from "./common/work-item";
 import { workItems } from '@/data/work';
+import { blurDataURLs } from "@/data/images";
+import Image from "next/image";
 import { Fragment } from "react";
 
 export default function About() {
@@ -12,10 +14,23 @@ export default function About() {
         <SectionHeader header="ABOUT ME"/>
         <div className="mt-8 md:mt-10 flex flex-col gap-8">
             <ContentDiv>
-                <div className = {`${sans.className} flex flex-col text-ink gap-4 text-md md:text-lg font-light leading-relaxed`}>
-                    <p>I'm a senior at <ContentLink text="Swarthmore College" link ="https://www.swarthmore.edu/" /> completing a B.A. in Computer Science and a B.S. in General Engineering. I'm currently applying to graduate programs with interests spanning Human-Computer Interaction, Robotics, Computational Mathematics, and Trustworthy AI. </p>
-                    <p>My background reflects the breadth and depth that come with a STEM-focused liberal arts education. I've taken a wide range of courses—from compilers and computer vision to mobile robotics, nonlinear dynamics, and numerical methods—using an equally diverse set of languages, including C, C++, OCaml, MATLAB, and Python.</p>
-                    <p>Beyond the classroom, I serve as Vice President of the <ContentLink text="Swarthmore College Computer Society" link ="https://www.sccs.swarthmore.edu/" />, a long-standing student-led organization that provides services to the broader student body. I've also been a teaching assistant for five semesters' worth of computer science and engineering courses, and I currently lead Swarthmore's rock climbing club as president. When I'm not working with computers, you can usually find me watching the Patriots, gaming with friends, or exploring new music!</p>
+                <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+                    <div className="relative shrink-0 mx-auto md:mx-0 w-full max-w-sm md:w-2/5 md:max-w-none aspect-[4/3] overflow-hidden rounded-lg shadow-lg ring-1 ring-white/10">
+                        <Image
+                            src="/scenery/hitl.webp"
+                            alt="Nick soldering wiring on a robotics rig, surrounded by orange cabling"
+                            fill
+                            placeholder="blur"
+                            blurDataURL={blurDataURLs.hitl}
+                            sizes="(max-width: 768px) 90vw, 40vw"
+                            className="object-cover object-[50%_42%]"
+                        />
+                    </div>
+                    <div className = {`${sans.className} flex flex-col text-ink gap-4 text-md md:text-lg font-light leading-relaxed md:justify-center`}>
+                        <p>I'm a senior at <ContentLink text="Swarthmore College" link ="https://www.swarthmore.edu/" /> completing a B.A. in Computer Science and a B.S. in General Engineering. I'm currently applying to graduate programs with interests spanning Human-Computer Interaction, Robotics, Computational Mathematics, and Trustworthy AI. </p>
+                        <p>My background reflects the breadth and depth that come with a STEM-focused liberal arts education. I've taken a wide range of courses—from compilers and computer vision to mobile robotics, nonlinear dynamics, and numerical methods—using an equally diverse set of languages, including C, C++, OCaml, MATLAB, and Python.</p>
+                        <p>Beyond the classroom, I serve as Vice President of the <ContentLink text="Swarthmore College Computer Society" link ="https://www.sccs.swarthmore.edu/" />, a long-standing student-led organization that provides services to the broader student body. I've also been a teaching assistant for five semesters' worth of computer science and engineering courses, and I currently lead Swarthmore's rock climbing club as president. When I'm not working with computers, you can usually find me watching the Patriots, gaming with friends, or exploring new music!</p>
+                    </div>
                 </div>
             </ContentDiv>
             <ContentDiv>

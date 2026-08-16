@@ -3,6 +3,7 @@
 // librsvg refuses to parse the 10 MB base64 line, so instead of rendering the
 // SVG we extract the embedded raster and reproduce the crop with sharp, then
 // emit web-sized WebP + a tiny inlined blur placeholder (LQIP) for next/image.
+// Plain raster sources (raw: true) skip extraction and go straight to sharp.
 // Run with: npm run optimize:images
 import sharp from 'sharp';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
@@ -15,6 +16,7 @@ const jobs = [
   { name: 'hero', src: pub('scenery/boat_landing.svg'), out: pub('scenery/hero.webp'), width: 2400, quality: 72 },
   { name: 'boat', src: pub('scenery/boat.svg'), out: pub('scenery/boat.webp'), width: 1400, quality: 74 },
   { name: 'avatar', src: pub('about_icons/spotify_pfp.svg'), out: pub('about_icons/avatar.webp'), width: 256, quality: 80 },
+  { name: 'hitl', src: pub('scenery/nick_hitl.jpg'), out: pub('scenery/hitl.webp'), width: 1800, quality: 76, raw: true },
 ];
 
 // Pull the embedded raster + the pattern crop out of a Figma-style SVG export.
@@ -41,7 +43,7 @@ async function extractCroppedRaster(svgPath) {
 
 const blurs = {};
 for (const job of jobs) {
-  const base = await extractCroppedRaster(job.src);
+  const base = job.raw ? sharp(job.src).rotate() : await extractCroppedRaster(job.src);
   await base.clone().resize({ width: job.width, withoutEnlargement: true }).webp({ quality: job.quality }).toFile(job.out);
 
   const blurBuf = await base.clone().resize({ width: 20 }).webp({ quality: 30 }).toBuffer();

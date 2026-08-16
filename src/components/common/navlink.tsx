@@ -10,7 +10,7 @@ export default function NavLink({text, link}: {text: string, link: string}) {
         }
     };
 
-    const style = "cursor-pointer underline-offset-4 transition-colors hover:text-accent hover:underline";
+    const style = "cursor-pointer link-glow hover:text-accent";
 
     let id_link = link.split(':');
     if (id_link[0] === 'id') {
