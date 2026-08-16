@@ -19,7 +19,9 @@ export default function Landing() {
       />
       <div className="hero-scrim absolute inset-0 -z-10" />
 
-      <div className={`${mono.className} text-[#3E3A35] text-xl md:text-2xl 2xl:text-3xl flex flex-col lg:flex-row items-center lg:items-start lg:justify-between font-light max-w-7xl mx-auto`}>
+      <div
+        className={`${mono.className} text-[#3E3A35] text-xl md:text-2xl 2xl:text-3xl flex flex-col lg:flex-row items-center lg:items-start lg:justify-between font-light max-w-7xl mx-auto`}
+      >
         <div className="flex items-center gap-3">
           <Image
             src="/about_icons/avatar.webp"
@@ -37,7 +39,7 @@ export default function Landing() {
             NICK FETTIG
           </p>
           <p className="text-lg md:text-2xl font-light tracking-wide text-[#5A544B]">
-            Student &amp; Developer
+            Aspiring Roboticist
           </p>
         </div>
         <div className="flex-col gap-3 text-right hidden lg:flex z-10">
@@ -55,7 +57,16 @@ export default function Landing() {
         aria-label="Scroll to content"
         className="scroll-cue absolute bottom-6 left-1/2 -translate-x-1/2 text-[#3E3A35] hover:text-[#1B2A2B] transition-colors"
       >
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <path d="M6 9l6 6 6-6" />
         </svg>
       </a>
