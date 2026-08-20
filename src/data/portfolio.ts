@@ -11,7 +11,7 @@ export const projects: ProjectType[] = [
     title: "SEPTA Train Station Display",
     link: "https://blog.fettig.dev/building-a-train-station-display/",
     bg_image_src: "/portfolio_bg/septa.png",
-    skills: ["Python", "Raspberry Pi", "Embedded Systems", "CAD"],
+    skills: ["Python", "Raspberry Pi", "Embedded Systems", "CAD", "Linux"],
     description:
       "Senior capstone project at Swarthmore: a real-time SEPTA transit display built with Raspberry Pi-driven LED panels, a custom CAD-designed enclosure, and Python software polling live arrival data from SEPTA's transit API.",
   },
@@ -123,6 +123,7 @@ export const skillCategories: Record<string, Category> = {
   Flask: "Backend",
   Python: "Backend",
   "Linux Administration": "Systems",
+  Linux: "Systems",
   Docker: "Systems",
   Networking: "Systems",
   Security: "Systems",
