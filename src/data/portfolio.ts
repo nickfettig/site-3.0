@@ -8,6 +8,14 @@ export type ProjectType = {
 
 export const projects: ProjectType[] = [
   {
+    title: "SEPTA Train Station Display",
+    link: "https://blog.fettig.dev/building-a-train-station-display/",
+    bg_image_src: "/portfolio_bg/septa.png",
+    skills: ["Python", "Raspberry Pi", "Embedded Systems", "CAD"],
+    description:
+      "Senior capstone project at Swarthmore: a real-time SEPTA transit display built with Raspberry Pi-driven LED panels, a custom CAD-designed enclosure, and Python software polling live arrival data from SEPTA's transit API.",
+  },
+  {
     title: "MoCoVax",
     link: "https://www.youtube.com/watch?v=0RwvzJ4OUs8",
     bg_image_src: "/portfolio_bg/mocovax.png",
@@ -86,7 +94,8 @@ export const projects: ProjectType[] = [
   },
 ];
 
-export type Category = "Frontend" | "Backend" | "Systems" | "Database";
+export type Category =
+  "Frontend" | "Backend" | "Systems" | "Hardware" | "Database";
 
 // Order of the portfolio filter buttons.
 export const categoryOrder = [
@@ -94,6 +103,7 @@ export const categoryOrder = [
   "Frontend",
   "Backend",
   "Systems",
+  "Hardware",
   "Database",
 ] as const;
 
@@ -119,6 +129,9 @@ export const skillCategories: Record<string, Category> = {
   "Cloudflare Tunneling": "Systems",
   Kubernetes: "Systems",
   Skaffold: "Systems",
+  "Raspberry Pi": "Hardware",
+  "Embedded Systems": "Hardware",
+  CAD: "Hardware",
   PostgreSQL: "Database",
   MariaDB: "Database",
   Prisma: "Database",
