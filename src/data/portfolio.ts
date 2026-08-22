@@ -24,6 +24,14 @@ export const projects: ProjectType[] = [
       "A website created in March 2021 to monitor where vaccines were available in Montgomery County, MD. Over the two and a half months the website was active, it received 120k+ visits and helped hundreds of people receive vaccinations.",
   },
   {
+    title: "ResNet Fish Classifier",
+    link: "/resnet_fish.pdf",
+    bg_image_src: "/portfolio_bg/fish_with_mask.png",
+    skills: ["Python", "TensorFlow", "Machine Learning", "Computer Vision"],
+    description:
+      "Co-authored a CS63 course paper building two ResNet50-based fish classifiers: one using ImageNet transfer learning, one using early fusion with segmentation masks. The early fusion model reached 97.22% accuracy classifying 9 fish species.",
+  },
+  {
     title: "Home Server",
     link: "https://blog.fettig.dev/new-build-home-server/",
     bg_image_src: "/portfolio_bg/homeserver.png",
@@ -95,7 +103,12 @@ export const projects: ProjectType[] = [
 ];
 
 export type Category =
-  "Frontend" | "Backend" | "Systems" | "Hardware" | "Database";
+  | "Frontend"
+  | "Backend"
+  | "Systems"
+  | "Hardware"
+  | "Machine Learning"
+  | "Database";
 
 // Order of the portfolio filter buttons.
 export const categoryOrder = [
@@ -104,6 +117,7 @@ export const categoryOrder = [
   "Backend",
   "Systems",
   "Hardware",
+  "Machine Learning",
   "Database",
 ] as const;
 
@@ -133,6 +147,9 @@ export const skillCategories: Record<string, Category> = {
   "Raspberry Pi": "Hardware",
   "Embedded Systems": "Hardware",
   CAD: "Hardware",
+  TensorFlow: "Machine Learning",
+  "Machine Learning": "Machine Learning",
+  "Computer Vision": "Machine Learning",
   PostgreSQL: "Database",
   MariaDB: "Database",
   Prisma: "Database",
