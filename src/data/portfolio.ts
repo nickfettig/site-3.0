@@ -29,7 +29,7 @@ export const projects: ProjectType[] = [
     bg_image_src: "/portfolio_bg/fish_with_mask.png",
     skills: ["Python", "TensorFlow", "Machine Learning", "Computer Vision"],
     description:
-      "Co-authored a CS63 course paper building two ResNet50-based fish classifiers: one using ImageNet transfer learning, one using early fusion with segmentation masks. The early fusion model reached 97.22% accuracy classifying 9 fish species.",
+      "Co-authored a paper documenting expirements with two ResNet50-based fish classifiers: one using ImageNet transfer learning, one using early fusion with segmentation masks. The early fusion model reached 97.22% accuracy classifying 9 fish species.",
   },
   {
     title: "Home Server",
