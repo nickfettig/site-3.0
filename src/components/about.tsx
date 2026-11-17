@@ -30,22 +30,24 @@ export default function About() {
               className={`${sans.className} text-ink text-md flex flex-col gap-4 leading-relaxed font-light md:justify-center md:text-lg`}
             >
               <p>
-                I'm a recent graduate of{" "}
-                <ContentLink
-                  text="Swarthmore College"
-                  link="https://www.swarthmore.edu/"
-                />
-                , having completed a B.A. in Computer Science and a B.S. in
-                General Engineering. I will be starting my M.S. in Robotics at
-                the{" "}
+                I'm an M.S. Robotics student at the{" "}
                 <ContentLink
                   text="University of Michigan"
                   link="https://robotics.umich.edu/"
+                />
+                , where I'm a graduate researcher in the U-M SMART Lab, part of
+                the NSF Center for Digital Twins in Manufacturing. My research
+                focuses on keeping a machine's digital twin synchronized with
+                the physical system. Before Michigan, I graduated from{" "}
+                <ContentLink
+                  text="Swarthmore College"
+                  link="https://www.swarthmore.edu/"
                 />{" "}
-                in the Fall of 2026. I'm currently looking for research
-                opportunities in controls, RL, sim-to-real, or mobile robotics
-                to get a feel for what I'd like to study for a PhD. If your lab
-                has any opportunities in one of these areas, please reach out!
+                with a B.A. in Computer Science and a B.S. in General
+                Engineering. In January 2027, I'll be joining{" "}
+                <ContentLink text="SpaceX" link="https://www.spacex.com/" /> as
+                a Software Engineering Intern on the Components Engineering team
+                in Hawthorne, CA.
               </p>
               <p>
                 My background reflects the breadth and depth that come with a
@@ -54,7 +56,7 @@ export default function About() {
                 robotics, nonlinear dynamics, and numerical methods -- using an
                 equally diverse set of languages, including C, C++, OCaml,
                 MATLAB, and Python. I've had the opportunity to complete
-                robotics internships at{" "}
+                internships at{" "}
                 <ContentLink
                   text="Reliable Robotics"
                   link="https://reliable.co/"
